@@ -1,0 +1,4 @@
+Django
+pillow
+django-tinymce4-widget
+psycopg2

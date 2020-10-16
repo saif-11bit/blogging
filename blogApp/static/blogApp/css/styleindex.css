@@ -1,0 +1,439 @@
+/* Universal i.e for all CSS Start  */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Universal i.e for all CSS Ends  */
+
+.nav-item a {
+    font-size: 20px;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.cartlogo {
+    color: #feda0a;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* .w-100{
+    height: 100vh;
+} */
+/* .imageCarousel{
+     height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+} */
+.carousel-caption {
+    bottom: 80px !important;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.header-button a {
+    border: 1px solid rgb(253, 194, 0);
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    background: #feda0a;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.header-button a:hover {
+    color: #000;
+    background: #feda0a;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Latest Blog CSS Begins  */
+.latestBlog {
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+}
+
+.latestBlogCard {
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+
+/* Latest Blog Ends  */
+
+/* Subscribe to Blog  */
+
+.subscribeblog {
+    width: 100%;
+    height: auto;
+    margin: 80px auto;
+}
+
+.searchInput {
+    border-radius: 100px 0px 0px 100px !important;
+    border-color: #111 !important;
+    min-width: 150px;
+    min-height: 45px;
+}
+
+.searchInput::placeholder {
+    color: #111 !important;
+}
+
+.subscribeText {
+    color: #feda0a !important;
+    background: #111 !important;
+    border-radius: 0 100px 100px 0 !important;
+    font-size: 1.4rem !important;
+    min-width: 120px;
+    min-height: 40px;
+}
+
+/* .searchInput::placeholder {
+    color: #fff !important;
+} */
+
+.searchText {
+    border-radius: 0 100px 100px 0 !important;
+}
+
+/* .searchLogo {
+    color: #feda0a;
+} */
+
+
+/* Footer Begins  */
+.footerId {
+    width: 100%;
+    height: auto;
+    padding: 70px 0 20px 0;
+    background: #08090A;
+    position: relative;
+}
+
+.footer-div h4 {
+    text-transform: uppercase;
+    color: #feda0a;
+    margin-bottom: 25px;
+    font-size: 1.2rem !important;
+    font-weight: 600;
+}
+
+.footer-div li a {
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+.fbitext:hover {
+    color: #3b5998 !important;
+}
+
+.twitext:hover {
+    color: #00acee !important;
+}
+
+.insitext:hover {
+    color: #bc2a8d !important;
+}
+
+.youtubetext:hover {
+    color: #c4302b !important;
+}
+
+.fbi {
+    color: #3b5998;
+}
+
+.twi {
+    color: #00acee;
+}
+
+.insi {
+    color: #bc2a8d;
+}
+
+.yti {
+    color: #c4302b;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #feda0a;
+    background: #343633;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    color: #feda0a;
+    background: #08090A;
+}
+
+/* Footer Ends  */
+/* Sidebar Begins  */
+.sidebarlogo {
+    color: #feda0a;
+}
+
+.authorImgIndex {
+    justify-content: center;
+    text-align: center;
+    height: 115px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.closebtn {
+    color: #feda0a !important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    /*Will change with javascript */
+    position: fixed;
+    z-index: 1;
+    /* Stay on top*/
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    /*Disable horizontal scroll */
+    padding-top: 60px;
+    /*Place content 60px from the top*/
+    transition: 0.25s;
+}
+
+.sidenav .closebtn {
+    color: #feda0a;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav h3 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #feda0a;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a {
+    padding: 8px 8px 2px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
+
+/* Sidebar Ends  */
+.authorImg {
+    height: 50px !important;
+    /* border-radius: 50%; */
+}
+
+/* Blog post starts here  */
+.blogPostId {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* .blogPostPara{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 400;
+} */
+/* Blog post ends here  */
+/* About Author starts here  */
+.aboutAuthor {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+/* About Author ends here  */
+/* All blog css start here  */
+.allBlog {
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+}
+
+.allBlogsPost {
+    margin-top: 14px;
+
+}
+
+/* Contact Starts Here  */
+/* Khanquah Contact Starts  */
+.khanquahcontact {
+    width: 100%;
+    height: 100vh;
+    padding: 78px 0;
+    position: relative;
+}
+
+.khanquahcontact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(330deg, #feda0a 55%, #fff 0%);
+    z-index: -1;
+}
+
+.form-button button {
+    border: 1px solid #feda0a;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    color: #feda0a;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    background: transparent;
+}
+
+form:hover .form-button button {
+    background: #fff;
+    color: #feda0a;
+    box-shadow: 0 0 20px 0 rgba(251, 193, 0, 0.3);
+}
+
+form:hover .form-button button:hover {
+    outline: none;
+    background: #000;
+    color: #feda0a;
+    box-shadow: 0 0 20px 0 rgba(251, 193, 0, 0.3);
+}
+
+::placeholder {
+    font-size: 0.85rem;
+}
+
+#contactpagenavbar {
+    background: #111;
+}
+
+/* Khanquah Contact Ends  */
+
+
+
+
+/* Media Queries  */
+
+@media(max-width: 399px) {
+    .navCenter {
+        text-align: center !important;
+    }
+}
+
+@media(min-width:400px) and (max-width: 576px) {
+    .navCenter {
+        text-align: center !important;
+    }
+
+}
+
+@media(min-width:577px) and (max-width: 767px) {
+    .navCenter {
+        text-align: center !important;
+    }
+
+    .khanquahcontact {
+        padding: 100px 0;
+    }
+
+
+}
+
+@media(min-width: 768px) and (max-width:1023px) {
+    .khanquahcontact {
+        padding: 250px 0;
+    }
+}

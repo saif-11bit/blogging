@@ -1,0 +1,19 @@
+    <!-- Navbar Begins  -->
+    <nav class="navbar navbar-dark bg-dark mb-0" id="navbarId">
+        <a class="navbar-brand" href="{% url 'blogApp:index' %}"> Itihasik Duniya</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <span onclick="openNav()"><i class="fa fa-bars sidebarlogo" aria-hidden="true"></i></span>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar Ends  -->
+
+        <!-- Sidebar begins  -->
+    <div id="sidebar" class="sidenav">
+        <h3>Welcome</h3>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <li><a href="{% url 'blogApp:blogs' %}">Blogs</a></li>
+        <li><a href="{% url 'blogApp:contact' %}">Contact US</a></li>
+    </div>
+    <!-- Sidebar Ends  -->

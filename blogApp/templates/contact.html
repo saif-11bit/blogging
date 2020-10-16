@@ -1,0 +1,42 @@
+{% load static %}
+{% include 'header.html' %}
+{% include 'nav.html' %}
+    <!-- Form  -->
+    <section class="khanquahcontact">
+        <div class="container text-center">
+            <h1 class="font-weight-light text-center mt-4 mb-0">Contact Us </h1>
+            <p class="text-capitalize text-warning pt-1">We are here to help and answer andy question</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 offset-1">
+                    <form action="" method="post">{% csrf_token %}
+                        <div class="form-group">
+                            {{form.name}}
+                            <!-- <input type="text" class="form-control" id="username" required autocomplete="off"
+                                placeholder="Enter your Name"> -->
+                            
+                        </div>
+                        <div class="form-group">
+                            {{form.email}}
+                            <!-- <input type="email" class="form-control" id="email" required autocomplete="off"
+                                placeholder="Enter Email"> -->
+                        </div>
+                        <div class="form-group">
+                            {{form.phone}}
+                            <!-- <input type="number" class="form-control" id="mobile" required autocomplete="off"
+                                placeholder="Enter Phone Number"> -->
+                        </div>
+                        <div class="form-group">
+                            {{form.message}}
+                            <!-- <textarea id="comment" class="form-control" rows="4">Enter your message</textarea> -->
+                        </div>
+                        <div class="d-flex justify-content-center form-button">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% include 'footer2.html' %}

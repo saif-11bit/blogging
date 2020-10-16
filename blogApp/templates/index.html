@@ -1,0 +1,155 @@
+    {% load static %}
+    {% include 'header.html' %}
+    <div class="header" id="topHeader">
+        
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="navbarTop">
+            <div class="container">
+                <a href="{% url 'blogApp:index' %}" class="navbar-brand font-weight-bold text-white">ITIHASIK DUNIA</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item navCenter">
+                            <a href="{% url 'blogApp:blogs' %}" class="nav-link">Blogs</a>
+                        </li>
+                        <li class="nav-item navCenter">
+                            <a href="{% url 'blogApp:contact' %}" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item navCenter">
+                            <div id="sidebar" class="sidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <h3>About</h3>
+                                <div class="mt-2 justify-content-center text-center">
+                                    <img class="rounded-circle authorImgIndex" src="{{user.avatar.url}}">
+                                </div>
+                                <p class="mt-2">I am Anas Nadeem who loves to share information about History.
+                                </p>
+                                <h3>Social Links</h3>
+                                <a class="fbitext" href="#">Facebook <i class="fa fa-facebook fbi"
+                                        aria-hidden="true"></i></a>
+                                <a class="twitext" href="#">Twitter <i class="fa fa-twitter twi"
+                                        aria-hidden="true"></i></a>
+                                <a class="insitext" href="#">Instagram <i class="fa fa-instagram insi"
+                                        aria-hidden="true"></i></a>
+                                <a class="youtubetext" href="#">Youtube <i class="fa fa-youtube yti"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            <a href="#" class="nav-link"><span onclick="openNav()">About</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Sidebar Starts Here  -->
+<!--         <div id="sidebar" class="sidenav">
+            <h3>Welcome</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact US</a></li>
+        </div> -->
+
+        <!-- Carousel Starts Here  -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('{{crousal1.image.url}}')">
+                    <!-- <img class="w-100 imageCarousel" src="../Images/sufi_circuit.jpg" alt="First slide"> -->
+                    <div class="carousel-caption d-none d-block">
+                        <h5 class="animate__animated animate__bounceInDown">ITIHASIK DUNIYA</h5>
+                        <p class="animate__animated animate__bounceInLeft">Beautiful Blogs!!</p>
+                        <p class="header-button mt-3 animate__animated animate__bounceInUp"><a href="{% url 'blogApp:blogs' %}">Read Blogs</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('{{crousal2.image.url}}')">
+                    <!-- <img class="w-100 imageCarousel" src="../Images/45.jpg" alt="Second slide"> -->
+                    <div class="carousel-caption d-none d-block">
+                        <h5 class="animate__animated animate__bounceInLeft">ITIHASIK DUNIYA</h5>
+                        <p class="animate__animated animate__bounceInDown">Beautiful Blogs!!</p>
+                        <p class="header-button mt-3 animate__animated animate__bounceInRight"><a href="#">Read
+                                Blogs</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('{{crousal3.image.url}}')">
+                    <!-- <img class="w-100 imageCarousel" src="../Images/3.jpg" alt="Third slide"> -->
+                    <div class="carousel-caption d-none d-block">
+                        <h5 class="animate__animated animate__bounceInUp">ITIHASIK DUNIYA</h5>
+                        <p class="animate__animated animate__bounceInLeft">Beautiful Blogs!!</p>
+                        <p class="header-button mt-3 animate__animated animate__bounceInDown"><a href="#">Read Blogs</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Carousel Ends Here  -->
+    </div>
+
+    <!-- LatestID Starts Here  -->
+    <section class="latestBlog" id="latestBlogID">
+        <div class="container">
+            <h3 class="latestblogtitle">Latest Blog</h3>
+            
+            <div class="row">
+                {% for blog in blogs %}
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 latestBlogCard">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                            <a href="{{blog.get_absolute_url}}">
+                            <img class="img-fluid" src="{{blog.image.url}}">
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                            <h4>{{blog.title}}</h4>
+                            <p class="text-secondary">{{blog.brief|slice:":150"}}...
+                                <a href="{{blog.get_absolute_url}}">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+    <!-- LatestID Ends Here  -->
+
+    <!-- Subscribe to Blog Begins  -->
+    <section class="subscribeblog" id="subscribeblogId">
+        <div class="container">
+            <h3 class="text-center">Subscribe To Our Blog</h3>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <form action="" method="post">{% csrf_token %}
+                    <div class="input-group blogBar">
+                        {{form.email}}
+                        <!-- <input type="search" class="form-control searchInput" placeholder="Your Email"> -->
+
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text subscribeText">Subscribe</button>
+                            <!-- <span class="input-group-text subscribeText">Subscribe</span> -->
+                        </div>
+                    
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Subscribe to Blog Ends  -->
+
+    {% include 'footer.html' %}

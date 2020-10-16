@@ -1,0 +1,19 @@
+{% load static %}
+{% include 'header.html' %}
+{% include 'nav.html' %}
+
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('{{blog_details.image.url}}'); padding-bottom: 5em;">
+        <div class="container">
+            <h1 class="display-4 text-white" style="text-align: center;">{{blog_details.title}}</h1>
+            <p class="lead text-white" style="text-align: center;">-{{request.user.username}}, {{blog_details.date}}</p>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+        
+            <p>
+                {{blog_details.body|safe}}
+            </p>
+        </div>
+    </section>
+{% include 'footer2.html' %}
